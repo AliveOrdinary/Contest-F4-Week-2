@@ -8,6 +8,7 @@ const App = () => {
   const [view, setView] = useState([]);
   const [error, setError] = useState(false);
   const [postCount, setPostCount] = useState(20);
+  const [toggleState, setToggleState] = useState(false);
 
   const fetchData = () => {
     fetch(
@@ -25,11 +26,12 @@ const App = () => {
 
   const loadMore = () => {
     setPostCount(postCount + 20);
+    setToggleState(!toggleState);
   };
 
   useEffect(() => {
     fetchData();
-  }, [view]);
+  }, [toggleState]);
 
   const search = (searchText) => {
     let searchData = posts.filter((item) => item.title.includes(searchText));

@@ -5,10 +5,14 @@
   border: 1px solid #ffffff80;
   border-radius: 10px;
   color: white;
+  width: 200px;
 }
-/* .image {
-  width: fit-content;
-} */
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+  box-sizing: border-box;
+}
 
 .card-body {
   /* padding: 20px; */
@@ -19,7 +23,7 @@
 
 .like-btn {
   width: 80%;
-  background-color: #1e1e1e;
+  background-color: #000000;
   color: #ffffff80;
   border: 1px solid #ffffff80;
   padding: 7px 11px;
@@ -28,6 +32,8 @@
   margin-bottom: 10px;
 }
 .title {
+  margin-top: 5px;
+  margin-bottom: 5px;
   white-space: nowrap;
   width: 180px;
   overflow: hidden;
